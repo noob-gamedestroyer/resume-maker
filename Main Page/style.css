@@ -1,0 +1,40 @@
+h1{
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url('bg.jpg');
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3{
+    margin-top:20px;
+}
+
+.myimg{
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-left: 20px;
+    object-fit: fill;
+}
+
+#resume-template{
+    display: none;
+}
+#LogoutBtn, #esrBtn{
+    font-size: larger;
+    font-weight: 500;
+}
+
+#esrBtn:hover, #LogoutBtn:hover{
+    cursor: pointer;
+    font-weight: 750;
+}
