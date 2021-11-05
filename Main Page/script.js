@@ -175,7 +175,7 @@ function hideForm(){
 
 function logOut() {
     firebase.auth().signOut().then(() => {
-        history.back();
+        location.replace("/index.html")
         window.alert("Logged out");
     }).catch((error) => {
         window.alert(error);
