@@ -103,32 +103,32 @@ function generateResume() {
     var storageRef = firebase.storage().ref(user.uid);
     var picRef = storageRef.child(imgFile.name);
 
-    // try {
-    //     picRef.put(imgFile).then(function(snapshot){
-    //         console.log('uploaded file');
-    //     });
-    // } catch (error) {
-    //     console.log(error.message);
-    // }
+    try {
+        picRef.put(imgFile).then(function(snapshot){
+            console.log('uploaded file');
+        });
+    } catch (error) {
+        console.log(error.message);
+    }
 
 
-    // try {
-    //   firebase.database().ref(user.uid).set({
-    //     name: nameField,
-    //     email: user.email,
-    //     contact: contactField,
-    //     address: addressField,
-    //     git: gitField,
-    //     linkedIn: linkedInField,
-    //     profile: profileField,
-    //     we: str,
-    //     aq: aqStr,
-    //     sk: skStr,
-    //     pic: imgFile.name
-    //   });
-    // } catch (error) {
-    //   alert(error.message);
-    // }
+    try {
+      firebase.database().ref(user.uid).set({
+        name: nameField,
+        email: user.email,
+        contact: contactField,
+        address: addressField,
+        git: gitField,
+        linkedIn: linkedInField,
+        profile: profileField,
+        we: str,
+        aq: aqStr,
+        sk: skStr,
+        pic: imgFile.name
+      });
+    } catch (error) {
+      alert(error.message);
+    }
 
     reader.onloadend = function() {
         document.getElementById('imgTemplate').src = reader.result;
