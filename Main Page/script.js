@@ -175,7 +175,7 @@ function hideForm(){
 
 function logOut() {
     firebase.auth().signOut().then(() => {
-        location.replace("https://noob-gamedestroyer.github.io/resume-maker/index.html");
+        history.back();
         window.alert("Logged out");
     }).catch((error) => {
         window.alert(error);
