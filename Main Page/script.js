@@ -175,7 +175,7 @@ function hideForm(){
 
 function logOut() {
     firebase.auth().signOut().then(() => {
-        location.replace("/index.html");
+        location.replace("/resume-maker/index.html");
         window.alert("Logged out");
     }).catch((error) => {
         window.alert(error);
