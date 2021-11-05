@@ -98,9 +98,14 @@ function generateResume() {
 
     var storageRef = firebase.storage().ref(user.uid);
     var picRef = storageRef.child(imgFile.name);
-    picRef.put(imgFile).then(function(snapshot){
-        console.log('uploaded file');
-    });
+
+    try {
+        picRef.put(imgFile).then(function(snapshot){
+            console.log('uploaded file');
+        });
+    } catch (error) {
+        console.log(error.message);
+    }
 
 
     try {
